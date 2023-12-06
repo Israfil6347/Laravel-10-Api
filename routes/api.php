@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,8 @@ Route::get('/', function () {
 Route::ApiResource('menus', MenuController::class);
 Route::get('root/public-menus', [MenuController::class, 'publicRootMenus'])->name('menus.publicRootMenus');
 Route::get('root/admin-menus', [MenuController::class, 'adminRootMenus'])->name('menus.adminRootMenus');
+
+
+Route::ApiResource('posts', PostController::class);
+
 
